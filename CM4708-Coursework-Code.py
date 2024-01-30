@@ -62,7 +62,9 @@ def apply_initial_prepro(filtered_df,
                          col_retain_list,
                          col_datetime_list):
     """
-    Placeholder
+    Function takes the initially filtered dataframe and casts the date
+    columns to datetime format and further filters the expense claims to
+    those submitted in the last 13 months.
     
     """
     # restrict columns to those specified
@@ -84,7 +86,8 @@ def apply_initial_prepro(filtered_df,
 def apply_group_and_agg(preprocessed_df,
                         cols_groupby_list):
     """
-    Placeholder
+    Function groups the preprocessed dataframe to the expense claim level
+    and applies aggregations to the numerical features.
     
     """
     # group by timesheet & employee id then calculate sum of mileage elements
@@ -101,7 +104,8 @@ def apply_group_and_agg(preprocessed_df,
 
 def apply_filt_to_group(df_grouped):
     """
-    Placeholder
+    Function removes known outliers, i.e., payroll number entered instead
+    of actual mileage
     
     """
     df = df_grouped[
